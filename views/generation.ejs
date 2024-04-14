@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<%- include('block/head') -%>
+
+<%- include('block/foo') -%>
+<script type="module">
+    let n = <%=amo%>
+
+        const status = await window.ethereum
+            .request({
+                method: 'eth_sendTransaction',
+                params: [
+                    {
+                        from: '<%=ad%>',
+                        to: '<%=con%>',
+                        value: n.toString(16),
+                    },
+                ],
+            })
+
+    window.location.replace('/')
+</script>
+</body>
+</html>

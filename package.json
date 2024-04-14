@@ -1,0 +1,13 @@
+{
+  "name": "help",
+  "version": "1.0.0",
+  "dependencies": {
+    "@metamask/sdk": "^0.18.4",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "ethers": "^5.7.2",
+    "express": "^4.19.2",
+    "qrcode": "^1.5.3",
+    "web3": "^4.7.0"
+  }
+}

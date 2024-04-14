@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<%- include('block/head') -%>
+
+<div align="center">
+    <button id="create" class="but">Create</button>
+    <button id="manage" class="but">Manage</button>
+</div>
+
+<%- include('block/foo') -%>
+
+<script>
+    const buttonCreate = document.getElementById("create")
+    const buttonManage = document.getElementById("manage")
+
+    buttonCreate.addEventListener("click", () => window.location.replace("/create"))
+    buttonManage.addEventListener("click", () => window.location.replace("/manage"))
+
+</script>
+</body>
+</html>

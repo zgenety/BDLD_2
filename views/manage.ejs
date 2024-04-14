@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<%- include('block/head') -%>
+
+
+<% for (var n = 0; n < (b.length); n++) {%>
+    <div class="block">
+        <table style="width: 100%">
+            <tbody>
+            <tr>
+                <td><%=b[n].id%></td>
+                <td><%=b[n].disc%></td>
+                <td><%=b[n].amount%></td>
+                <td><img src="<%=b[n].src%>"></td>
+                <td><button class="man" id='<%=b[n].id%>%>'>Copy link</button></td>
+                <td>
+                    <form method="post" action="/manage"><button class="man" type="submit" name="<%=b[n].id%>">Delete</button></form>
+                </td>
+                <script>
+                    document.getElementById('<%=b[n].id%>').addEventListener("click", () => {
+                        navigator.clipboard.writeText('http://localhost:8080/QR/<%=b[n].id%>')
+                    })
+                </script>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+<%}%>
+
+
+<%- include('block/foo') -%>
+</body>
+</html>

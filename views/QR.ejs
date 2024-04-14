@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<%- include('block/head') -%>
+
+<div align="center">
+    <h2><%=d.disc%></h2>
+    <h1><%=d.amount%></h1>
+    <form method="post" action="/get/<%=d.id%>" name="myForm" onsubmit="return false;">
+        <input type="hidden" name="ad">
+        <button class="but" id="bb">Claim</button>
+    </form>
+</div>
+
+<script>
+    const button = document.getElementById('bb')
+
+    button.addEventListener("click", async ()=>{
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const account = accounts[0];
+        console.log(account)
+        if (account.length > 0) {
+            document.myForm.ad.value = account
+            document.myForm.submit()
+        }
+
+
+    })
+</script>
+
+<%- include('block/foo') -%>
+</body>
+</html>

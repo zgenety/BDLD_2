@@ -1,0 +1,76 @@
+
+.but {
+    margin-top: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 18px 70px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: rgb(51, 59, 93);
+    color: white;
+
+}
+
+.h_b {
+    background: rgb(7, 81, 127);
+    color: white;
+    font-size: 24px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #61799d;
+}
+
+.block {
+    font-size: 20px;
+    background: rgb(51, 59, 93);
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.man {
+    border-radius: 3px;
+    background: white;
+    border-width: 0;
+    padding: 5px;
+}
+.man:focus {
+    background: aqua;
+}
+
+header {
+    background: rgb(7, 81, 127);
+    border-radius: 3px;
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+footer {
+    background: #61799d;
+    color: white;
+    border-radius: 3px;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 94%;
+    height: 50px;
+}
+
+body{
+    background: rgb(252, 228, 167);
+
+}
+
+

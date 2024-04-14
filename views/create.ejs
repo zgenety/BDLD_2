@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<%- include('block/head') -%>
+
+
+<div align="center">
+    <form method="post" action="/generation" name="myForm" onsubmit="return false;">
+        <label for="wei" >Enter amount of Wei: </label><input id="wei" name="amount" type="number">
+        <label for="st" >Enter some description: </label><input id="st" name="disc" type="text" maxlength="20">
+        <input type="hidden" name="ad">
+        <button class="but" id="bb">Create</button>
+
+    </form>
+</div>
+
+<script>
+    const button = document.getElementById('bb')
+
+    button.addEventListener("click", async ()=>{
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const account = accounts[0];
+        console.log(account)
+        if (account.length > 0) {
+            //document.myForm.onsubmit = 'return true;'
+            document.myForm.ad.value = account
+            document.myForm.submit()
+        }
+
+
+    })
+</script>
+
+
+
+
+
+<%- include('block/foo') -%>
+
+</body>
+</html>
